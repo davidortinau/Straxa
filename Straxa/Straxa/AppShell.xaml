@@ -17,15 +17,17 @@
         <ResourceDictionary>
             <Color x:Key="NavigationPrimary">#2196F3</Color>
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="Shell.ShellForegroundColor" Value="White" />
-                <Setter Property="Shell.ShellTitleColor" Value="White" />
-                <Setter Property="Shell.ShellDisabledColor" Value="#B4FFFFFF" />
-                <Setter Property="Shell.ShellUnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="Shell.ShellTabBarForegroundColor" Value="White"/>
-                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#95FFFFFF"/>
-                <Setter Property="Shell.ShellTabBarTitleColor" Value="White"/>
+                <Setter Property="Shell.ShellBackgroundColor" 
+                        Value="White" />
+                <Setter Property="Shell.ShellForegroundColor"
+                        Value="#FF3300" />
+                <Setter Property="Shell.ShellTitleColor" Value="#1d1d1d" />
+                <Setter Property="Shell.ShellDisabledColor" Value="#B41d1d1d" />
+                <Setter Property="Shell.ShellUnselectedColor" Value="#951d1d1d" />
+                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="White" />
+                <Setter Property="Shell.ShellTabBarForegroundColor" Value="#FF3300"/>
+                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#33000000"/>
+                <Setter Property="Shell.ShellTabBarTitleColor" Value="#FF3300"/>
             </Style>
             <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
 
@@ -36,21 +38,76 @@
         </ResourceDictionary>
     </Shell.Resources>
 
-    <!-- Your Pages -->
     <ShellItem>
-        <ShellSection Title="Browse" Icon="tab_feed.png">
+        <Tab Title="Feed">
+            <Tab.Icon>
+                <FontImageSource Glyph="{x:Static local:IconFont.Home}"
+                                 FontFamily="{StaticResource FontAwesome}"
+                                 Size="18" />
+            </Tab.Icon>
+            <ShellContent Title="Following" ContentTemplate="{DataTemplate views:ItemsPage}" />
+            <ShellContent Title="You"
+                          ContentTemplate="{DataTemplate views:ItemsPage}" />
+            <ShellContent Title="Clubs"
+                          ContentTemplate="{DataTemplate views:ItemsPage}" />
+        </Tab>
+        <Tab Title="Explore">
+            <Tab.Icon>
+                <FontImageSource Glyph="{x:Static local:IconFont.Search}"
+                                 FontFamily="{StaticResource FontAwesome}"
+                                 Size="18" />
+            </Tab.Icon>
             <ShellContent ContentTemplate="{DataTemplate views:ItemsPage}" />
-        </ShellSection>
-        <ShellSection Title="About" Icon="tab_about.png">
-            <ShellContent ContentTemplate="{DataTemplate views:AboutPage}" />
-        </ShellSection>
+        </Tab>
+        <Tab Title="Record">
+            <Tab.Icon>
+                <FontImageSource Glyph="{x:Static local:IconFont.Laugh}"
+                                 FontFamily="{StaticResource FontAwesome}"
+                                 Size="18" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate views:ItemsPage}" />
+        </Tab>
+        <Tab Title="Profile">
+            <Tab.Icon>
+                <FontImageSource Glyph="{x:Static local:IconFont.User}"
+                                 FontFamily="{StaticResource FontAwesome}"
+                                 Size="18" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate views:ItemsPage}" />
+        </Tab>
+        <Tab Title="Segment Explorer">
+            <Tab.Icon>
+                <FontImageSource Glyph="{x:Static local:IconFont.MapMarker}"
+                                 FontFamily="{StaticResource FontAwesome}"
+                                 Size="18" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate views:ItemsPage}" />
+        </Tab>
+        <Tab Title="Find Friends">
+            <Tab.Icon>
+                <FontImageSource Glyph="{x:Static local:IconFont.SearchLocation}"
+                                 FontFamily="{StaticResource FontAwesome}"
+                                 Size="18" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate views:ItemsPage}" />
+        </Tab>
+        <Tab Title="Settings">
+            <Tab.Icon>
+                <FontImageSource Glyph="{x:Static local:IconFont.Heading}"
+                                 FontFamily="{StaticResource FontAwesome}"
+                                 Size="18" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate views:ItemsPage}" />
+        </Tab>
+        <Tab Title="Help">
+            <Tab.Icon>
+                <FontImageSource Glyph="{x:Static local:IconFont.QuestionCircle}"
+                                 FontFamily="{StaticResource FontAwesome}"
+                                 Size="18" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate views:ItemsPage}" />
+        </Tab>
     </ShellItem>
     
-    <!--
-    <FontImageSource Glyph="{x:Static local:IconFont.Home}" 
-                                 FontFamily="{StaticResource FontAwesome}"
-                                 Size="18"/>
-    -->
-
-
+    
 </Shell>

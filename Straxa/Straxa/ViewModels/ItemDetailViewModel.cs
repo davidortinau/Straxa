@@ -1,9 +1,11 @@
 ﻿using System;
 
 using Straxa.Models;
+using Xamarin.Forms;
 
 namespace Straxa.ViewModels
 {
+    [QueryProperty("ID", "id")]
     public class ItemDetailViewModel : BaseViewModel
     {
         public Item Item { get; set; }
@@ -12,5 +14,20 @@ namespace Straxa.ViewModels
             Title = item?.Text;
             Item = item;
         }
+
+        private string iD;
+
+        public string ID
+        {
+            get => iD;
+            set
+            {
+                iD = value;
+                Title = iD;
+            }
+
+        }
+
+
     }
 }

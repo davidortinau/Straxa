@@ -19,6 +19,8 @@ namespace Straxa.Views
             BindingContext = this.viewModel = viewModel;
         }
 
+        
+
         public ItemDetailPage()
         {
             InitializeComponent();
@@ -29,7 +31,7 @@ namespace Straxa.Views
                 Description = "This is an item description."
             };
 
-            viewModel = new ItemDetailViewModel(item);
+            viewModel = new ItemDetailViewModel();
             BindingContext = viewModel;
         }
     }

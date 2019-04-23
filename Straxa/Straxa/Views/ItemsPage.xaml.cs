@@ -22,6 +22,13 @@ namespace Straxa.Views
             InitializeComponent();
 
             BindingContext = viewModel = new ItemsViewModel();
+
+            Shell.SetBackButtonBehavior(this,
+                new BackButtonBehavior
+                {
+                    TextOverride = "Add New"
+                }
+                );
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -30,7 +37,11 @@ namespace Straxa.Views
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+            //await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+
+            //await Shell.Current.Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+
+            await Shell.Current.GoToAsync($"detail?id={item.Id}");
 
             // Manually deselect item.
             ItemsListView.SelectedItem = null;
