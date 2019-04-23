@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+       xmlns:local="clr-namespace:Straxa"
+       xmlns:views="clr-namespace:Straxa.Views"
+       RouteHost="companyname.com"
+       RouteScheme="app"
+       Route="Straxa"
+       FlyoutBehavior="Disabled"
+       Title="Straxa"
+       x:Class="Straxa.AppShell">
+
+    <!-- 
+        Styles and Resources 
+    -->
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.ShellForegroundColor" Value="White" />
+                <Setter Property="Shell.ShellTitleColor" Value="White" />
+                <Setter Property="Shell.ShellDisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.ShellUnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.ShellTabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.ShellTabBarTitleColor" Value="White"/>
+            </Style>
+            <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
+
+            <OnPlatform x:Key="FontAwesome"
+                        x:TypeArguments="x:String"
+                        Android="fa-solid-900.ttf#Font Awesome 5 Free"
+                        iOS="Font Awesome 5 Free" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <!-- Your Pages -->
+    <ShellItem>
+        <ShellSection Title="Browse" Icon="tab_feed.png">
+            <ShellContent ContentTemplate="{DataTemplate views:ItemsPage}" />
+        </ShellSection>
+        <ShellSection Title="About" Icon="tab_about.png">
+            <ShellContent ContentTemplate="{DataTemplate views:AboutPage}" />
+        </ShellSection>
+    </ShellItem>
+    
+    <!--
+    <FontImageSource Glyph="{x:Static local:IconFont.Home}" 
+                                 FontFamily="{StaticResource FontAwesome}"
+                                 Size="18"/>
+    -->
+
+
+</Shell>
