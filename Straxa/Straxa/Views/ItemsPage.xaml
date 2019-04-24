@@ -7,17 +7,14 @@
 
     <Shell.TitleView>
         <StackLayout VerticalOptions="Center">
-        <Label Text="Feed"
-               TextColor="#1d1d1d"
-               FontSize="24"
-               VerticalOptions="CenterAndExpand"
-               HorizontalOptions="Center"
-               />
+            <Label Text="Feed"
+                   TextColor="#1d1d1d"
+                   FontSize="24"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center" />
         </StackLayout>
     </Shell.TitleView>
 
-    
-    
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Friends" Clicked="AddItem_Clicked" />
         <ToolbarItem Text="Alerts"
