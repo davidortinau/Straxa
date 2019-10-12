@@ -12,6 +12,10 @@ namespace Straxa
         public App()
         {
             InitializeComponent();
+            
+#if DEBUG
+            HotReloader.Current.Run(this); 
+#endif
 
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();

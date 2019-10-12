@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Straxa.Views.ItemsPage"
-              Title="{Binding Title}"
+             Title="{Binding Title}"
              x:Name="BrowseItemsPage">
 
     <Shell.TitleView>
@@ -14,13 +14,7 @@
                    HorizontalOptions="Center" />
         </StackLayout>
     </Shell.TitleView>
-
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Friends" Clicked="AddItem_Clicked" />
-        <ToolbarItem Text="Alerts"
-                     Clicked="AddItem_Clicked" />
-    </ContentPage.ToolbarItems>
-
+    
     <StackLayout>
         <ListView x:Name="ItemsListView"
                 ItemsSource="{Binding Items}"

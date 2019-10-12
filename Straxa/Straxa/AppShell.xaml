@@ -1,11 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
        xmlns:local="clr-namespace:Straxa"
        xmlns:views="clr-namespace:Straxa.Views"
-       RouteHost="companyname.com"
-       RouteScheme="app"
-       Route="Straxa"
        FlyoutBehavior="Disabled"
        Title="Straxa"
        x:Class="Straxa.AppShell">
@@ -17,17 +14,17 @@
         <ResourceDictionary>
             <Color x:Key="NavigationPrimary">#2196F3</Color>
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.ShellBackgroundColor" 
+                <Setter Property="Shell.BackgroundColor" 
                         Value="White" />
-                <Setter Property="Shell.ShellForegroundColor"
+                <Setter Property="Shell.ForegroundColor"
                         Value="#FF3300" />
-                <Setter Property="Shell.ShellTitleColor" Value="#1d1d1d" />
-                <Setter Property="Shell.ShellDisabledColor" Value="#B41d1d1d" />
-                <Setter Property="Shell.ShellUnselectedColor" Value="#951d1d1d" />
-                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="White" />
-                <Setter Property="Shell.ShellTabBarForegroundColor" Value="#FF3300"/>
-                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#33000000"/>
-                <Setter Property="Shell.ShellTabBarTitleColor" Value="#FF3300"/>
+                <Setter Property="Shell.TitleColor" Value="#1d1d1d" />
+                <Setter Property="Shell.DisabledColor" Value="#B41d1d1d" />
+                <Setter Property="Shell.UnselectedColor" Value="#951d1d1d" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="White" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="#FF3300"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#33000000"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="#FF3300"/>
             </Style>
             <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
 
